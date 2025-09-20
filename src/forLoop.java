@@ -15,6 +15,28 @@ public class forLoop {
             System.out.println("10,000 at "+ rate+ "% interest = " + interestAmount);
 
         }
+        int counter=0;
+        int sumNum=0;
+        for(int i = 1;counter< 5 && i <= 1000;i++ ){
+            if((i%3==0) && (i%5==0)){
+                counter ++;
+                sumNum = sumNum +i;
+                System.out.println(i);
+            }
+
+        }
+        System.out.println(sumNum);
+
+        int number = 0;
+        while(number < 50){
+            number+=5;
+            if (number % 25 == 0){
+                continue;
+            }
+            System.out.println(number+"_");
+        }
+
+        System.out.println(sumDigits(-10));
 
 
 
@@ -23,6 +45,24 @@ public class forLoop {
     public static double calculateInterest(double amount, double interestRate){
         return (amount * (interestRate /100));
     }
+
+
+    public static int sumDigits(int number){
+        if(number<0)return-1;
+        if(number<10)return number;
+        int num = number;
+        int sum = 0;
+
+        while (num > 0) {
+            sum += num % 10;
+            num = num/10;
+        }
+
+        return sum;
+
+    }
+
+
 
 
 }
